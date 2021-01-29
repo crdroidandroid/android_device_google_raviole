@@ -16,6 +16,9 @@ TARGET_PREBUILT_KERNEL := device/google/raviole-kernel/Image.lz4
 DEVICE_MANIFEST_FILE += \
     device/google/raviole/manifest_radio.xml
 
+# Touch
+include hardware/google/pixel/touch/device.mk
+
 # Build necessary packages for vendor
 
 # Bluetooth
