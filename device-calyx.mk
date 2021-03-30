@@ -16,6 +16,9 @@ TARGET_PREBUILT_KERNEL := device/google/raviole-kernel/Image.lz4
 DEVICE_MANIFEST_FILE += \
     device/google/raviole/manifest_radio.xml
 
+# PowerShare
+include hardware/google/pixel/powershare/device.mk
+
 # Touch
 include hardware/google/pixel/touch/device.mk
 
