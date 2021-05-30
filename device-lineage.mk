@@ -67,7 +67,8 @@ PRODUCT_COPY_FILES += \
 
 # PixelParts
 PRODUCT_PACKAGES += \
-    GoogleParts
+    GoogleParts \
+    PixelFrameworksOverlay
 
 # Powershare
 PRODUCT_PACKAGES += \
