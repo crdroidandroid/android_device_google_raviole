@@ -11,3 +11,5 @@ PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := google
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+$(call inherit-product, vendor/google/oriole/oriole-vendor.mk)
