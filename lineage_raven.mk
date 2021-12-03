@@ -11,3 +11,5 @@ PRODUCT_MODEL := Pixel 6 Pro
 PRODUCT_BRAND := google
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+$(call inherit-product, vendor/google/raven/raven-vendor.mk)
