@@ -1028,6 +1028,12 @@ vendor/etc/init/vendor.google.wireless_charger@1.3-service.rc
 vendor/lib64/librtxproto.so
 vendor/lib64/libwlcproto_13.so
 
+# Hotword
+-product/priv-app/HotwordEnrollmentOKGoogleFUSION/HotwordEnrollmentOKGoogleFUSION.apk
+-product/priv-app/HotwordEnrollmentXGoogleFUSION/HotwordEnrollmentXGoogleFUSION.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
 # Input Classifier
 vendor/bin/hw/android.hardware.input.classifier@1.0-service
 vendor/etc/input_classifier_model.pb
