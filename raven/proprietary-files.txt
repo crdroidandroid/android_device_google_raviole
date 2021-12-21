@@ -934,12 +934,10 @@ system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/lib64/com.google.edgetpu_app_service-V1-ndk_platform.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V1-ndk_platform.so
 vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-armnn
 vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
 vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
 vendor/etc/public.libraries.txt
 vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service-armnn.rc
 vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc
 vendor/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@service-darwinn-aidl.xml
