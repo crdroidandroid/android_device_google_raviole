@@ -106,9 +106,9 @@ vendor/lib64/libdisplaycolor.so
 vendor/lib64/libgpudataproducer.so
 # Also used for TfLite
 vendor/lib/libOpenCL-pixel.so
-vendor/lib/libOpenCL.so
+-vendor/lib/libOpenCL.so
 vendor/lib64/libOpenCL-pixel.so
-vendor/lib64/libOpenCL.so
+-vendor/lib64/libOpenCL.so
 
 # DMD
 vendor/bin/dmd
