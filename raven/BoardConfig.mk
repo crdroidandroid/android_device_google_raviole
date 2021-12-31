@@ -17,6 +17,7 @@ TARGET_BOARD_INFO_FILE := device/google/raviole/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := raven
 TARGET_SCREEN_DENSITY := 560
 USES_DEVICE_GOOGLE_RAVIOLE := true
+WITH_GMS := true
 
 include device/google/gs101/BoardConfig-common.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
