@@ -74,8 +74,6 @@ vendor/etc/chre/columbus.napp_header
 vendor/etc/chre/columbus.so
 vendor/etc/chre/drop.napp_header
 vendor/etc/chre/drop.so
-vendor/etc/chre/gating.napp_header
-vendor/etc/chre/gating.so
 vendor/etc/chre/geofence.napp_header
 vendor/etc/chre/geofence.so
 vendor/etc/chre/gesture.napp_header
@@ -988,6 +986,8 @@ product/etc/permissions/com.google.omadm.trigger.xml
 product/etc/permissions/com.verizon.apn.xml
 product/etc/permissions/com.verizon.services.xml
 product/etc/permissions/features-verizon.xml
+product/lib/libdmengine.so
+product/lib/libdmjavaplugin.so
 -product/priv-app/CarrierLocation/CarrierLocation.apk;PRESIGNED
 #-product/priv-app/CarrierServices/CarrierServices.apk;PRESIGNED
 -product/priv-app/CarrierSettings/CarrierSettings.apk;PRESIGNED
@@ -1058,9 +1058,6 @@ vendor/etc/init/android.hardware.input.classifier@1.0-service.rc
 -vendor/etc/vintf/manifest/manifest_input.classifier-service.xml
 vendor/lib64/com.google.input-V1-ndk_platform.so
 vendor/lib64/libdeeptouch.so
-
-# MCPS
-vendor/usr/share/mcps_tools/mcps_tools_config.json
 
 # Media
 vendor/bin/hw/google.hardware.media.c2@1.0-service
@@ -1157,6 +1154,7 @@ vendor/lib64/libqorvo_uwb_params_nfcc.so
 # Pixel Camera
 -product/app/PixelCameraServicesRaven/PixelCameraServicesRaven.apk;PRESIGNED
 -system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk
+system_ext/etc/permissions/com.google.android.camera.extensions.xml
 -system_ext/framework/com.google.android.camera.extensions.jar
 product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml
 product/etc/sysconfig/vendor-apex-allowlist.xml
@@ -1193,6 +1191,8 @@ product/etc/sysconfig/pixel_experience_2021_midyear.xml
 -product/app/SSRestartDetector/SSRestartDetector.apk
 -system_ext/app/OemRilHookService/OemRilHookService.apk
 system_ext/framework/oemrilhook.jar
+system_ext/framework/RadioConfigLib.jar
+system_ext/etc/permissions/com.android.omadm.radioconfig.xml
 system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
 system_ext/etc/permissions/oemrilhook.xml
 system_ext/lib/libmediaadaptor.so
