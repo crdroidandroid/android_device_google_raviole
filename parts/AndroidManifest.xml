@@ -35,7 +35,7 @@
         android:targetSdkVersion="30"/>
 
     <application
-        android:label="@string/device_settings_app_name"
+        android:label="Google Parts"
         android:persistent="true">
 
         <receiver android:name=".BootCompletedReceiver">
