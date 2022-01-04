@@ -68,3 +68,5 @@ PRODUCT_PACKAGES += \
 
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
+
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
