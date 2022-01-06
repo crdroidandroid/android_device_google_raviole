@@ -66,8 +66,6 @@ PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
 
-PRODUCT_PACKAGES += \
-    GoogleParts
 
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
