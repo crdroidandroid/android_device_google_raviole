@@ -10,6 +10,9 @@ PRODUCT_NAME := lineage_raven
 PRODUCT_MODEL := Pixel 6 Pro
 PRODUCT_BRAND := google
 
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.disable_rescue=true
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
     PRIVATE_BUILD_DESC="raven-user 12 SQ1D.211205.016.A1 7888514 release-keys"
