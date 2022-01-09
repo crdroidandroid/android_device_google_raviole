@@ -26,7 +26,6 @@ $(call inherit-product-if-exists, vendor/google/camera/devices/raviole/raven/dev
 $(call inherit-product-if-exists, vendor/google_devices/raviole/proprietary/WallpapersRaven.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay
-DEVICE_PACKAGE_OVERLAYS += device/google/raviole/raven/overlay-lineage
 
 include device/google/raviole/audio/raven/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
@@ -38,7 +37,7 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
-ifeq ($(filter raven, $(TARGET_DEVICE)),)
+ifeq ($(filter factory_raven, $(TARGET_PRODUCT)),)
 include device/google/gs101/uwb/uwb.mk
 endif
 
@@ -46,8 +45,6 @@ include hardware/google/pixel/vibrator/cs40l25/device.mk
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.support_kernel_idle_timer=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.enable_frame_rate_override=true
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=log
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -141,7 +138,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 
 # userdebug specific
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
     PRODUCT_COPY_FILES += \
         device/google/gs101/init.hardware.wlc.rc.userdebug:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_PLATFORM).wlc.rc
 endif
