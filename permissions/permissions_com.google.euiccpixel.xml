@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- for the partition: /system_ext -->
+<permissions>
+    <privapp-permissions package="com.google.euiccpixel">
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.NFC_SET_CONTROLLER_ALWAYS_ON"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.SECURE_ELEMENT_PRIVILEGED_OPERATION"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+
+</permissions>
