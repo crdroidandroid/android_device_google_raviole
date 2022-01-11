@@ -7,7 +7,7 @@ system_ext/etc/permissions/com.shannon.imsservice.xml
 system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml
 system_ext/etc/permissions/com.shannon.rcsservice.xml
 system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
-#system_ext/framework/hardware.qorvo.uwb-V1-java.jar
+system_ext/framework/hardware.qorvo.uwb-V1-java.jar
 system_ext/lib/libmediaadaptor.so
 system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
@@ -27,7 +27,7 @@ system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.ap
 system_ext/priv-app/ShannonIms/ShannonIms.apk;PRESIGNED
 system_ext/priv-app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk;PRESIGNED
 system_ext/priv-app/ShannonRcs/ShannonRcs.apk;PRESIGNED
-#system_ext/priv-app/UwbService/UwbService.apk
+-system_ext/priv-app/UwbService/UwbService.apk;:com.qorvo.uwb.certificate
 
 # product partition
 product/etc/CarrierSettings/a1_at.pb

@@ -12,3 +12,5 @@ ro.vendor.config.build_carrier=europen
 vendor.rild.libpath=libsitril.so
 persist.vendor.ril.ecc.xml=1
 
+# UWB
+ro.vendor.uwb.calibration.calibrationpaths=/vendor/etc/calib_paths
