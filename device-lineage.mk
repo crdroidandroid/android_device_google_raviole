@@ -121,3 +121,7 @@ PRODUCT_PACKAGES += \
     libnfnetlink \
     libtrusty_metrics \
     pixelpowerstats_provider_aidl_interface-cpp.vendor
+
+# Rescue
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.disable_rescue=true
