@@ -10,8 +10,9 @@ PRODUCT_NAME := lineage_raven
 PRODUCT_MODEL := Pixel 6 Pro
 PRODUCT_BRAND := google
 
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.sys.disable_rescue=true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+persist.sys.disable_rescue=true \
+ro.control_privapp_permissions=log
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=raven \
