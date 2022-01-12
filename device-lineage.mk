@@ -68,3 +68,7 @@ PRODUCT_PACKAGES += \
 
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
+
+# Rescue
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.disable_rescue=true
