@@ -23,3 +23,4 @@ BUILD_FINGERPRINT := google/raven/raven:12/SQ1D.211205.016.A1/7888514:user/relea
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 $(call inherit-product, vendor/google/raven/raven-vendor.mk)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
