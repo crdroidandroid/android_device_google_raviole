@@ -72,3 +72,5 @@ TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
 # Rescue
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
+
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
