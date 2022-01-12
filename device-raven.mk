@@ -138,11 +138,7 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/raviole
 
 
-# userdebug specific
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-    PRODUCT_COPY_FILES += \
-        device/google/gs101/init.hardware.wlc.rc.userdebug:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.$(PRODUCT_PLATFORM).wlc.rc
-endif
+
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
