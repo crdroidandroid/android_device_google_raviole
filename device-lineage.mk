@@ -104,5 +104,9 @@ PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
 
+# Rescue Mode
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.disable_rescue=true
+
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
