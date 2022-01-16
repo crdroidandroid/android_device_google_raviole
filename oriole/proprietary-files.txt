@@ -1,12 +1,17 @@
 # All blobs are extracted from Google factory images for each new ASB
 
 # system_ext partition
+system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
+system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/permissions/com.shannon.imsservice.xml
 system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml
 system_ext/etc/permissions/com.shannon.rcsservice.xml
+system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
 system_ext/lib/libmediaadaptor.so
 system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
+system_ext/lib64/com.google.edgetpu_app_service-V1-ndk_platform.so
+system_ext/lib64/com.google.edgetpu_vendor_service-V1-ndk_platform.so
 system_ext/lib64/libaptXHD_encoder.so
 system_ext/lib64/libaptX_encoder.so
 system_ext/lib64/libmediaadaptor.so
