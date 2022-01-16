@@ -1,5 +1,5 @@
 # Inherit some common stuff.
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/device-lineage.mk)
