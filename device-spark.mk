@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-spark
 
 # EUICC
 PRODUCT_COPY_FILES += \
