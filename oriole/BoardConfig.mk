@@ -21,4 +21,5 @@ USES_DEVICE_GOOGLE_RAVIOLE := true
 include device/google/gs101/BoardConfig-common.mk
 -include vendor/google_devices/gs101/prebuilts/BoardConfigVendor.mk
 -include vendor/google_devices/oriole/proprietary/BoardConfigVendor.mk
-include vendor/google/oriole/BoardConfigVendor.mk
+
+include device/google/raviole/oriole/BoardConfig-calyx.mk
