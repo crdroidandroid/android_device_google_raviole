@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
     libtrusty_metrics \
     pixelpowerstats_provider_aidl_interface-cpp.vendor
 
+# Properties
+TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
+
 # Rescue
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
