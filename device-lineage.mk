@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
     libtrusty_metrics \
     pixelpowerstats_provider_aidl_interface-cpp.vendor
 
+# Powershare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.gs101
+
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
 
