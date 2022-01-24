@@ -1,4 +1,4 @@
-# Extracted from raven-user-12-SQ1D.211205.017-7955197-release-keys
+# Extracted from raven-user-12-SQ1D.220105.007-8030436-release-keys
 
 # AoC
 vendor/bin/aocd
@@ -74,8 +74,6 @@ vendor/etc/chre/columbus.napp_header
 vendor/etc/chre/columbus.so
 vendor/etc/chre/drop.napp_header
 vendor/etc/chre/drop.so
-vendor/etc/chre/gating.napp_header
-vendor/etc/chre/gating.so
 vendor/etc/chre/geofence.napp_header
 vendor/etc/chre/geofence.so
 vendor/etc/chre/gesture.napp_header
@@ -92,11 +90,6 @@ vendor/etc/chre/smartbatching.so
 vendor/etc/chre/uv_exposure.napp_header
 vendor/etc/chre/uv_exposure.so
 vendor/etc/init/chre_daemon.rc
-
-# Digital Car Key
-system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml
--system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar
--system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk
 
 # Display
 vendor/etc/atc_profile.json
@@ -172,22 +165,23 @@ product/etc/CarrierSettings/ahamo_jp.pb
 product/etc/CarrierSettings/airtel_in.pb
 product/etc/CarrierSettings/apt_tw.pb
 product/etc/CarrierSettings/assurance_us.pb
-product/etc/CarrierSettings/att5g_us.pb
 product/etc/CarrierSettings/att5gsa_us.pb
+product/etc/CarrierSettings/att5g_us.pb
 product/etc/CarrierSettings/att_us.pb
 product/etc/CarrierSettings/bell_ca.pb
 product/etc/CarrierSettings/bluegrass_us.pb
-product/etc/CarrierSettings/boost_us.pb
 product/etc/CarrierSettings/boosttmo_us.pb
+product/etc/CarrierSettings/boost_us.pb
 product/etc/CarrierSettings/bouygues_fr.pb
 product/etc/CarrierSettings/btb_gb.pb
 product/etc/CarrierSettings/btc_gb.pb
 product/etc/CarrierSettings/carrier_list.pb
-product/etc/CarrierSettings/cellcom_us.pb
 product/etc/CarrierSettings/cellcommno_us.pb
+product/etc/CarrierSettings/cellcom_us.pb
 product/etc/CarrierSettings/cht_tw.pb
 product/etc/CarrierSettings/congstar_de.pb
 product/etc/CarrierSettings/consumercellulartmo_us.pb
+product/etc/CarrierSettings/coriolis_fr.pb
 product/etc/CarrierSettings/cricket5g_us.pb
 product/etc/CarrierSettings/cricket_us.pb
 product/etc/CarrierSettings/cspire_us.pb
@@ -198,14 +192,14 @@ product/etc/CarrierSettings/ee_gb.pb
 product/etc/CarrierSettings/eplus_de.pb
 product/etc/CarrierSettings/esn_gb.pb
 product/etc/CarrierSettings/fet_tw.pb
-product/etc/CarrierSettings/fi_us.pb
 product/etc/CarrierSettings/fido_ca.pb
-product/etc/CarrierSettings/firstnet_us.pb
 product/etc/CarrierSettings/firstnetpacific2_us.pb
 product/etc/CarrierSettings/firstnetpacific_us.pb
+product/etc/CarrierSettings/firstnet_us.pb
+product/etc/CarrierSettings/fi_us.pb
 product/etc/CarrierSettings/fizz_ca.pb
-product/etc/CarrierSettings/free_fr.pb
 product/etc/CarrierSettings/freedommobile_ca.pb
+product/etc/CarrierSettings/free_fr.pb
 product/etc/CarrierSettings/gamma_gb.pb
 product/etc/CarrierSettings/h3_at.pb
 product/etc/CarrierSettings/h3_gb.pb
@@ -219,6 +213,7 @@ product/etc/CarrierSettings/kddimvno_jp.pb
 product/etc/CarrierSettings/kena_it.pb
 product/etc/CarrierSettings/koodo_ca.pb
 product/etc/CarrierSettings/kpn_nl.pb
+product/etc/CarrierSettings/liberty_pr.pb
 product/etc/CarrierSettings/linemo_jp.pb
 product/etc/CarrierSettings/luckymobile_ca.pb
 product/etc/CarrierSettings/metropcs_us.pb
@@ -247,8 +242,8 @@ product/etc/CarrierSettings/smarty_gb.pb
 product/etc/CarrierSettings/softbank_jp.pb
 product/etc/CarrierSettings/solomobile_ca.pb
 product/etc/CarrierSettings/spectrum_us.pb
-product/etc/CarrierSettings/sprint_us.pb
 product/etc/CarrierSettings/sprintprepaid_us.pb
+product/etc/CarrierSettings/sprint_us.pb
 product/etc/CarrierSettings/sprintwholesale_us.pb
 product/etc/CarrierSettings/starhub_sg.pb
 product/etc/CarrierSettings/stc_sa.pb
@@ -278,6 +273,7 @@ product/etc/CarrierSettings/tracfonetmo_us.pb
 product/etc/CarrierSettings/tracfoneverizon_us.pb
 product/etc/CarrierSettings/tstar_tw.pb
 product/etc/CarrierSettings/twm_tw.pb
+product/etc/CarrierSettings/uqmobile_jp.pb
 product/etc/CarrierSettings/uscc_us.pb
 product/etc/CarrierSettings/verizon_us.pb
 product/etc/CarrierSettings/verymobile_it.pb
@@ -1066,9 +1062,6 @@ vendor/etc/init/android.hardware.input.classifier@1.0-service.rc
 vendor/lib64/com.google.input-V1-ndk_platform.so
 vendor/lib64/libdeeptouch.so
 
-# MCPS
-vendor/usr/share/mcps_tools/mcps_tools_config.json
-
 # Media
 vendor/bin/hw/google.hardware.media.c2@1.0-service
 vendor/bin/hw/samsung.hardware.media.c2@1.0-service
@@ -1168,7 +1161,7 @@ system_ext/etc/permissions/com.google.android.camera.extensions.xml
 -system_ext/framework/com.google.android.camera.extensions.jar
 product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml
 product/etc/sysconfig/vendor-apex-allowlist.xml
-vendor/apex/com.google.pixel.camera.hal.apex;PRESIGNED
+-vendor/apex/com.google.pixel.camera.hal.apex
 vendor/etc/libg3a_standalone_gabc_rc
 vendor/etc/libg3a_standalone_gaf_rc
 vendor/etc/libg3a_standalone_ghawb_rc
@@ -1330,6 +1323,7 @@ vendor/firmware/cs40l26.wmfw
 
 # WLAN firmware
 vendor/firmware/bcmdhd.cal
+vendor/firmware/bcmdhd.cal_EVT1.0
 vendor/firmware/bcmdhd.cal_JPN
 vendor/firmware/bcmdhd.cal_MMW
 vendor/firmware/bcmdhd.cal_PROTO1.0
