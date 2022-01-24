@@ -1,5 +1,11 @@
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+# artifact path requirements
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/GoogleExtShared.apk \
+    system/etc/permissions/privapp-permissions-google.xml \
+    system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
+
 # For Google Camera
 PRODUCT_COPY_FILES += \
     device/google/raviole/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
