@@ -1,5 +1,11 @@
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+# artifact path requirements
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/app/GoogleExtShared/GoogleExtShared.apk \
+    system/etc/permissions/privapp-permissions-google.xml \
+    system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
