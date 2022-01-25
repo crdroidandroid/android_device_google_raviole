@@ -64,6 +64,11 @@ PRODUCT_PACKAGES += \
     nos_app_keymaster:64 \
     nos_app_weaver:64
 
+# Power
+PRODUCT_PACKAGES += \
+    vendor.google.google_battery@1.1.vendor:64 \
+    vendor.google.wireless_charger@1.3.vendor:64
+
 # Tinycompress
 PRODUCT_PACKAGES += \
     libtinycompress
