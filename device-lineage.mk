@@ -8,6 +8,10 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/permissions/privapp-permissions-google.xml \
     system/priv-app/GooglePackageInstaller/GooglePackageInstaller.apk
 
+# For Google Camera
+PRODUCT_COPY_FILES += \
+    device/google/raviole/the_experiences.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/the_experiences.xml
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
