@@ -69,6 +69,10 @@ PRODUCT_PACKAGES += \
     vendor.google.google_battery@1.1.vendor:64 \
     vendor.google.wireless_charger@1.3.vendor:64
 
+# Powershare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.gs101
+
 # Tinycompress
 PRODUCT_PACKAGES += \
     libtinycompress
