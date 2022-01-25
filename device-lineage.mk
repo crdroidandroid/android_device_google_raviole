@@ -1,3 +1,5 @@
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
