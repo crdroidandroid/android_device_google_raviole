@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     libtrusty_metrics \
     pixelpowerstats_provider_aidl_interface-cpp.vendor
 
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.gs101
