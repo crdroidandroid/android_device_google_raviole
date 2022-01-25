@@ -1,5 +1,7 @@
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+TARGET_PREBUILT_KERNEL := device/google/raviole-kernel/Image.lz4
+
 # artifact path requirements
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/app/GoogleExtShared/GoogleExtShared.apk \
