@@ -70,6 +70,9 @@ PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
 
+# Touch
+include hardware/google/pixel/touch/device.mk
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
