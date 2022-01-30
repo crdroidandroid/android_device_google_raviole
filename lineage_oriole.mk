@@ -5,6 +5,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/google/raviole/device-lineage.mk)
 $(call inherit-product, device/google/raviole/aosp_oriole.mk)
 
+# Vendor Properties
+TARGET_VENDOR_PROP := device/google/raviole/oriole/vendor.prop
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_oriole
 PRODUCT_MODEL := Pixel 6
