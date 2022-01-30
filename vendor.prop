@@ -8,6 +8,9 @@ ro.opa.eligible_device=true
 drm.service.enabled=true
 media.mediadrmservice.enable=true
 
+# Graphics
+ro.hardware.egl=mali
+
 # Radio
 persist.vendor.ril.use_radio_hal=1.6
 ro.vendor.config.build_carrier=europen
