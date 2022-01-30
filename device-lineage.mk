@@ -73,6 +73,9 @@ PRODUCT_PACKAGES += \
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 
+# Touch
+include hardware/google/pixel/touch/device.mk
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.disable_rescue=true
