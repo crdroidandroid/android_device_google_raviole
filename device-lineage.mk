@@ -1,3 +1,5 @@
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
+
 # Libraries required for vendor
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor \
