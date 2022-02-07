@@ -183,6 +183,7 @@ product/etc/sysconfig/vendor-apex-allowlist.xml
 product/lib/libdmengine.so
 product/lib/libdmjavaplugin.so
 -product/priv-app/CarrierLocation/CarrierLocation.apk;PRESIGNED
+-product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
 #-product/priv-app/CarrierServices/CarrierServices.apk;PRESIGNED
 -product/priv-app/CarrierSettings/CarrierSettings.apk;PRESIGNED
 -product/priv-app/ConnMO/ConnMO.apk
