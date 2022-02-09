@@ -975,6 +975,9 @@ vendor/lib64/vendor.google.radioext@1.1.so
 vendor/lib64/vendor.google.radioext@1.2.so
 vendor/lib64/vendor.google.radioext@1.3.so
 
+# Google Sound
+-product/app/SoundAmplifierPrebuilt/SoundAmplifierPrebuilt.apk
+
 # Google Telephony
 -product/app/Tycho/Tycho.apk;PRESIGNED
 -product/app/VZWAPNLib/VZWAPNLib.apk
