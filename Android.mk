@@ -44,5 +44,13 @@ $(DM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /product/lib/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(HBM_JNI_SYMLINKS) $(DM_SYMLINKS)
+PWRSTATS_LIBS := libpowerstatshaldataprovider.so
+PWRSTATS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT)/priv-app/TurboAdapter/lib/arm64/,$(notdir $(PWRSTATS_LIBS)))
+$(PWRSTATS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "powerstats lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(HBM_JNI_SYMLINKS) $(DM_SYMLINKS) $(PWRSTATS_SYMLINKS)
 endif
