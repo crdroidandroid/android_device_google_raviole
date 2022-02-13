@@ -58,9 +58,7 @@ PRODUCT_PACKAGES += \
     nos_app_avb:64 \
     nos_app_identity:64 \
     nos_app_keymaster:64 \
-    nos_app_weaver:64 \
-    vendor.google.google_battery@1.1.vendor:64 \
-    vendor.google.wireless_charger@1.3.vendor:64
+    nos_app_weaver:64
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
