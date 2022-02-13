@@ -2,25 +2,22 @@
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common LineageOS stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_oriole.mk)
 $(call inherit-product, device/google/raviole/device-lineage.mk)
 
-# Vendor Properties
-TARGET_VENDOR_PROP := device/google/raviole/oriole/vendor.prop
-
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_oriole
+PRODUCT_NAME := statix_oriole
 PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=oriole \
-    PRIVATE_BUILD_DESC="oriole-user 12 SQ1D.220105.007 8030436 release-keys"
+    PRIVATE_BUILD_DESC="oriole-user 12 SQ1D.220205.003 8069835 release-keys"
 
-BUILD_FINGERPRINT := google/oriole/oriole:12/SQ1D.220105.007/8030436:user/release-keys
+BUILD_FINGERPRINT := google/oriole/oriole:12/SQ1D.220205.003/8069835:user/release-keys
 
 $(call inherit-product, vendor/google/oriole/oriole-vendor.mk)
