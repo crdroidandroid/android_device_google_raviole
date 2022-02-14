@@ -1,13 +1,13 @@
 # Inherit some common stuff.
-$(call inherit-product, vendor/calyx/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/google/gs101/calyx_common.mk)
-$(call inherit-product, device/google/raviole/device-calyx.mk)
+$(call inherit-product, device/google/gs101/lineage_common.mk)
+$(call inherit-product, device/google/raviole/device-lineage.mk)
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := calyx_raven
+PRODUCT_NAME := lineage_raven
 PRODUCT_MODEL := Pixel 6 Pro
 PRODUCT_BRAND := google
 
