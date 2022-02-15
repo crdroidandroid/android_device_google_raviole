@@ -175,3 +175,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Enable camera exif model/make reporting
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
+
+# HbmSVManager Overlay
+PRODUCT_PACKAGES += HbmSVManagerOverlayOriole
