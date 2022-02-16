@@ -67,9 +67,8 @@ PRODUCT_PACKAGES += \
     GoogleParts \
     PixelFrameworksOverlay
 
-# Powershare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.gs101
+# PowerShare
+include hardware/google/pixel/powershare/device.mk
 
 # Telephony
 PRODUCT_PACKAGES += \
