@@ -1,6 +1,3 @@
-# enherit common device configuration
-$(call inherit-product, device/google/gs101/device-lineage.mk)
-
 # overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
