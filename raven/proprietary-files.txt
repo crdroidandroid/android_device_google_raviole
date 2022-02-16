@@ -969,7 +969,7 @@ vendor/firmware/google/edgetpu-abrolhos.fw
 -vendor/lib64/libmetrics_logger.so
 
 # Google HBM Service
--system_ext/priv-app/HbmSVManager/HbmSVManager.apk
+-system_ext/priv-app/HbmSVManager/HbmSVManager.apk|b3c3353c9e4d47710d5003de1a276f950c5e167e
 -system_ext/lib64/libhbmsvmanager_jni.so
 # symlink to system_ext/priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so
 
