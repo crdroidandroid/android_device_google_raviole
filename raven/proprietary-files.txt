@@ -96,7 +96,7 @@ vendor/etc/init/chre_daemon.rc
 # Digital Car Key
 system_ext/etc/permissions/org.carconnectivity.android.digitalkey.timesync.xml
 -system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar
--system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk
+-system_ext/priv-app/CccDkTimeSyncService/CccDkTimeSyncService.apk;PRESIGNED
 
 # Display
 vendor/etc/atc_profile.json
