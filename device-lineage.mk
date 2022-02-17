@@ -1,6 +1,9 @@
 # overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+# Kernel
+TARGET_PREBUILT_KERNEL := device/google/raviole-kernel/Image.lz4
+
 # Libraries required for vendor
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor \
