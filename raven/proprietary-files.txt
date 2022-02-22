@@ -1,5 +1,8 @@
 # Extracted from raven-user 12 SQ1D.220205.003 8069835 release-keys
 
+# Ambient music
+product/etc/ambient/matcher_tah.leveldb
+
 # AoC
 vendor/bin/aocd
 vendor/etc/aoc/BLUETOOTH.dat
