@@ -23,4 +23,13 @@
          etc. dialogs. -->
     <string translatable="false" name="config_appsNotReportingCrashes">com.google.android.euicc</string>
 
+    <!-- Enable Now Playing Components -->
+    <string-array name="config_forceEnabledComponents" translatable="false">
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryContentProvider</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.history.HistoryActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicNotificationsSettingsActivity</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSetupWizardActivity</item>
+    </string-array>
+
 </resources>
