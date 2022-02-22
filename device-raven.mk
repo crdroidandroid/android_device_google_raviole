@@ -145,7 +145,7 @@ endif
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=20
+    ro.vendor.build.svn=21
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
@@ -157,8 +157,8 @@ PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
 
 # Keyboard side padding in dp for portrait mode
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=5
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=5
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=3
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=3
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
