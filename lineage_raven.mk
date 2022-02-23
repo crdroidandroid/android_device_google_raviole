@@ -10,6 +10,7 @@ $(call inherit-product, device/google/gs101/lineage-common.mk)
 $(call inherit-product, device/google/raviole/device-lineage.mk)
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
 $(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/google/pixelparts/pixelparts.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_raven
