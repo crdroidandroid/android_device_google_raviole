@@ -67,8 +67,7 @@ PRODUCT_COPY_FILES += \
 
 # PixelParts
 PRODUCT_PACKAGES += \
-    GoogleParts \
-    PixelFrameworksOverlay
+    GoogleParts
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
