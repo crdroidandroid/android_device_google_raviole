@@ -93,4 +93,4 @@ TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+##$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
