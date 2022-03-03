@@ -22,9 +22,6 @@
     <!-- Whether device supports increased touch sensitvity -->
     <bool name="config_supportGloveMode">true</bool>
 
-    <!-- Exempt ImsService from privacy (location) indicators -->
-    <string name="config_systemAudioIntelligence" translatable="false">com.shannon.imsservice</string>
-
     <!-- Keep this in sync with vendor/calyx -->
     <string-array name="config_locationExtraPackageNames" translatable="false">
         <!-- ImsService -->
@@ -42,7 +39,6 @@
         <item>com.google.android.gms</item>
     </string-array>
 
-
     <!-- Flag indicating whether we should enable the adaptive sleep.-->
     <bool name="config_adaptive_sleep_available">true</bool>
 
@@ -55,5 +51,16 @@
     <!-- Live Captions provided by Google's Device Personalization Service package  -->
     <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
     <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
+
+    <!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+
+    <!-- Make AiAi the default role holder for System Intelligence -->
+    <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemAudioIntelligence">com.google.android.as</string>
+    <string name="config_systemNotificationIntelligence">com.google.android.as</string>
+    <string name="config_systemTextIntelligence">com.google.android.as</string>
+    <string name="config_systemUiIntelligence">com.google.android.as</string>
+    <string name="config_systemVisualIntelligence">com.google.android.as</string>
 
 </resources>
