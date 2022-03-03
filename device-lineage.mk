@@ -60,21 +60,25 @@ PRODUCT_PACKAGES += \
     nos_app_keymaster:64 \
     nos_app_weaver:64
 
+# AiAi Config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/allowlist_com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.google.android.as.xml
+
+# Powershare
+include hardware/google/pixel/powershare/device.mk
+
+# Parts
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
+# Telephony
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml
 
-# Powershare
-include hardware/google/pixel/powershare/device.mk
-
-# Telephony
 PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
-
-# Parts
-$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 
 # Touch
 include hardware/google/pixel/touch/device.mk
@@ -86,4 +90,4 @@ persist.sys.disable_rescue=true
 # Vendor Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
 
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
