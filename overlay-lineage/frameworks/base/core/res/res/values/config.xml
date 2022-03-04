@@ -22,6 +22,9 @@
     <!-- Whether device supports increased touch sensitvity -->
     <bool name="config_supportGloveMode">true</bool>
 
+    <!-- Exempt ImsService from privacy (location) indicators -->
+    <string name="config_systemTelephonyPackage" translatable="false">com.shannon.imsservice</string>
+
     <!-- Keep this in sync with vendor/calyx -->
     <string-array name="config_locationExtraPackageNames" translatable="false">
         <!-- ImsService -->
