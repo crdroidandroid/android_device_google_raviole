@@ -16,14 +16,11 @@
 */
 -->
 <resources>
-    <!-- for 20dp of padding at 3.5px/dp at default density -->
-    <dimen name="rounded_corner_content_padding">50px</dimen>
-
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">1px</dimen>
 
-    <!-- Height of the status bar header bar when on Keyguard (match status_bar_portrait) -->
-    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
+    <!-- Height of the status bar header bar when on Keyguard (match status_bar_height) -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
 
     <!-- Padding for the system icons on the keyguard (when no multi user switch is showing).
     The icons always have a 4dp padding in the container so we only need 26 extra px of padding
@@ -62,8 +59,5 @@
 
     <!-- Padding for the lock icon on the keyguard. In pixels - should not scale with display size. -->
     <dimen name="lock_icon_padding">68px</dimen>
-
-    <!-- Alpha in duration in ms for the auth ripple to become fully vislble. If set to 0, it is immediately visible. -->
-    <integer name="auth_ripple_alpha_in_duration">0</integer>
 </resources>
 

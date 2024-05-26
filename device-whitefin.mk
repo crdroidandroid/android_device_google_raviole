@@ -27,6 +27,18 @@ DEVICE_PACKAGE_OVERLAYS += device/google/raviole/whitefin/overlay
 include device/google/gs101/device-common.mk
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include device/google/raviole/audio/whitefin/audio-tables.mk
+include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/gps/brcm/cbd_gps.mk
+include device/google/gs-common/touch/lsi/lsi.mk
+
+# wireless_charger HAL service needs to be included specially due to no raviole-sepolicy folder
+PRODUCT_PACKAGES += vendor.google.wireless_charger-default
+DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/wireless_charger/compatibility_matrix.xml
+
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,slider)
+$(call soong_config_set,lyric,tuning_product,slider)
+$(call soong_config_set,google3a_config,target_device,slider)
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -57,10 +69,54 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-	device/google/gs101/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf
+	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
+	frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
+	frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml \
+	frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
+	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
+	device/google/raviole/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+	device/google/raviole/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+
+PRODUCT_PACKAGES += \
+	$(RELEASE_PACKAGE_NFC_STACK) \
+	Tag \
+	android.hardware.nfc-service.st
 
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += device/google/raviole/powerstats/whitefin
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/24Q1
+else ifneq (,$(filter AP2%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/24Q2
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/raviole/prebuilts/trusty/trunk
+endif
+
+# tetheroffload HAL
+PRODUCT_PACKAGES += \
+	vendor.samsung_slsi.hardware.tetheroffload@1.1-service
+
+# Power HAL config
+PRODUCT_COPY_FILES += \
+	device/google/raviole/powerhint-whitefin.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# This device is shipped with 31 (Android S)
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+# Device features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+
+# Location
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+else
+        PRODUCT_COPY_FILES += \
+		device/google/raviole/location/gps_user.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+endif
+

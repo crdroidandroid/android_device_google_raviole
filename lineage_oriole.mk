@@ -1,26 +1,43 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2280
-TARGET_SCREEN_WIDTH := 1080
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
-# Inherit some common LineageOS stuff.
+# Inherit some common Lineage stuff.
+TARGET_DISABLE_EPPE := true
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Gapps
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_oriole.mk)
-$(call inherit-product, device/google/raviole/device-lineage.mk)
+$(call inherit-product, device/google/gs101/lineage_common.mk)
 
-# Vendor Properties
-TARGET_VENDOR_PROP := device/google/raviole/oriole/vendor.prop
+include device/google/raviole/oriole/device-lineage.mk
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_oriole
-PRODUCT_MODEL := Pixel 6
+# Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel 6
+PRODUCT_NAME := lineage_oriole
+
+# Crdroid Extra Stuffs
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_IS_PIXEL := true
+WITH_GAPPS := true
+TARGET_HAS_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_UDFPS_ANIMATIONS := true
+
+# Use Scudo instead of Jemalloc
+PRODUCT_USE_SCUDO := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=oriole \
-    PRIVATE_BUILD_DESC="oriole-user 12 SQ1D.220105.007 8030436 release-keys"
+    TARGET_PRODUCT=oriole \
+    PRIVATE_BUILD_DESC="oriole-user 14 AP1A.240505.004 11583682 release-keys"
 
-BUILD_FINGERPRINT := google/oriole/oriole:12/SQ1D.220105.007/8030436:user/release-keys
+BUILD_FINGERPRINT := google/oriole/oriole:14/AP1A.240505.004/11583682:user/release-keys
 
 $(call inherit-product, vendor/google/oriole/oriole-vendor.mk)

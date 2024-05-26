@@ -20,6 +20,7 @@ PRODUCT_PACKAGES := \
     ShannonQualifiedNetworksService \
     ShannonIms \
     ShannonRcs \
+    UwbVendorService \
 
 PRODUCT_PACKAGES += \
     libmediaadaptor \
@@ -27,6 +28,9 @@ PRODUCT_PACKAGES += \
 #  blob(s) necessary for raven hardware
 PRODUCT_COPY_FILES := \
     vendor/google_devices/raven/proprietary/com.shannon.imsservice.xml:system_ext/etc/permissions/com.shannon.imsservice.xml:samsung \
+    vendor/google_devices/raven/proprietary/com.shannon.qualifiednetworksservice.xml:system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml:samsung \
+    vendor/google_devices/raven/proprietary/com.shannon.rcsservice.xml:system_ext/etc/permissions/com.shannon.rcsservice.xml:samsung \
     vendor/google_devices/raven/proprietary/oemrilhook.xml:system_ext/etc/permissions/oemrilhook.xml:samsung \
+    vendor/google_devices/raven/proprietary/privapp-permissions-qorvo.xml:system_ext/etc/permissions/privapp-permissions-qorvo.xml:qorvo \
     vendor/google_devices/raven/proprietary/oemrilhook.jar:system_ext/framework/oemrilhook.jar:samsung \
 

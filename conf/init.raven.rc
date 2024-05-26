@@ -11,6 +11,9 @@ on init
     # Power Stats HAL
     chown system system /sys/devices/platform/10d30000.spi/spi_master/spi10/spi10.0/uwb/power_stats
 
+on init && property:ro.boot.vh_sched_available=0
+    setprop vendor.powerhal.config powerhint-mainline.json
+
 on fs
     # Face
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/faceauth.app
@@ -33,6 +36,16 @@ on property:graphics.display.kernel_idle_timer.enabled=true
 
 on property:graphics.display.kernel_idle_timer.enabled=false
     write /sys/devices/platform/exynos-drm/primary-panel/panel_idle "0"
+
+# Thermal
+on late-init && property:ro.boot.hardware.revision=PROTO1.0
+    setprop vendor.disable.usb.overheat.mitigation.control 1
+
+on late-init && property:ro.boot.hardware.revision=PROTO1.1
+    setprop vendor.disable.usb.overheat.mitigation.control 1
+
+on late-init && property:ro.boot.hardware.revision=EVT1.0
+    setprop vendor.disable.usb.overheat.mitigation.control 1
 
 # Bluetooth
 on post-fs-data
