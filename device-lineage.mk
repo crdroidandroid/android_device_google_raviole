@@ -24,6 +24,15 @@ include hardware/google/pixel/powershare/device.mk
 # wireless_charger HAL service
 include device/google/gs-common/wireless_charger/wireless_charger.mk
 
+# ViPER4AndroidFX
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+# Audio sepolicy dirs
+BOARD_SEPOLICY_DIRS += device/google/raviole/sepolicy/audio
+
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Build necessary packages for vendor
 
 # Audio
