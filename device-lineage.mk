@@ -208,3 +208,6 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     libevent.vendor
+
+# PixelParts
+include packages/apps/PixelParts/device.mk
