@@ -72,9 +72,18 @@ PRODUCT_COPY_FILES += \
 	device/google/raviole/conf/init.raviole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.raviole.rc \
 	device/google/raviole/conf/init.oriole.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.oriole.rc
 
+# Play Integrity
+-include vendor/lineage-priv/keys/keys.mk
+
 # Recovery files
 PRODUCT_COPY_FILES += \
 	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.oriole.rc
+
+# Quick Tap
+PRODUCT_COPY_FILES += \
+    device/google/raviole/conf/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.columbus.use_ap_sensor=false
 
 # insmod files
 PRODUCT_COPY_FILES += \
